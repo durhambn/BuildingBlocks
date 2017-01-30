@@ -12,5 +12,8 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:text="Hello World! adkfd adkfdi dfdied dkfdieidld dfkdfoweisd dijfeo ideoidnf ldk efeoifne oifndkf lllllllll lllllllllll lllllllll"
+        android:lines="2"
+        android:ems="15"
+        android:ellipsize="end"/>
 </RelativeLayout>
