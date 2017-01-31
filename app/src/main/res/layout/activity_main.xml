@@ -9,42 +9,26 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="edu.cofc.buildingblocks.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World! adkfd adkfdi dfdied dkfdieidld dfkdfoweisd dijfeo ideoidnf ldk efeoifne oifndkf lllllllll lllllllllll lllllllll"
-        android:lines="2"
-        android:ems="15"
-        android:ellipsize="end"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="www.kabriggs.people.cofc.edu"
-        android:lines="2"
-        android:ems="15"
-        android:ellipsize="end"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:autoLink="web"
-        android:hint="Click Me"
-        android:id="@+id/textView" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="1-843-555-1234"
-        android:autoLink="phone"
-        android:hint="Call me"
-        android:layout_below="@+id/textView"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="41dp"
-        android:id="@+id/textView2" />
-
-    <EditText
-        android:id="@+id/input_filtered"
+    <AutoCompleteTextView
+        android:id="@+id/AutoCompleteTextView01"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="type here"
-        android:lines="4" />
+        android:hint="Pick a color or type your own"
+        android:completionThreshold="1" />
+
+    <Spinner
+        android:id="@+id/Spinner01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:entries="@array/colors"
+        android:prompt="@string/spin_prompt"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/droid"
+        android:contentDescription="@string/app_name"/>
 </RelativeLayout>

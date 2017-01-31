@@ -3,7 +3,14 @@ package edu.cofc.buildingblocks;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.InputFilter;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
+import android.widget.Spinner;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -14,10 +21,29 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        text_filtered = (EditText) findViewById(R.id.input_filtered);
-        text_filtered.setFilters(new InputFilter[] {
-                new InputFilter.AllCaps(),
+        final String[] COLORS = {"red", "green", "orange", "blue", "purple", "black", "yellow", "cyan", "magenta"};
 
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, COLORS);
+
+        AutoCompleteTextView text = (AutoCompleteTextView) findViewById(R.id.AutoCompleteTextView01);
+        text.setAdapter(adapter);
+
+        final Spinner spin = (Spinner) findViewById(R.id.Spinner01);
+
+
+        spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+                Toast.makeText(parent.getContext(),
+                        "OnItemSelectedListener : " + parent.getItemAtPosition(position).toString(),
+                        Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
         });
 
 
