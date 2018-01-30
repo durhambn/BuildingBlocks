@@ -11,7 +11,15 @@ import android.widget.Button;
 import android.widget.TextView;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+
+    @Override
+    public void onClick(View v) {
+        /*
+        YOUR CODE GOES HERE
+         */
+
+    }
 
     private TextView textView;
     private Button button;
@@ -53,4 +61,10 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+
+    public void onClickMethod(View v) {
+        textView.setText(R.string.layoutFileClick);
+    }
+
+
 }

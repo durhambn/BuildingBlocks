@@ -25,4 +25,15 @@
         android:layout_marginStart="156dp"
         android:layout_marginTop="285dp"
         android:text="Button" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="152dp"
+        android:layout_marginTop="401dp"
+        android:onClick="onClickMethod"
+        android:text="Button" />
 </RelativeLayout>
