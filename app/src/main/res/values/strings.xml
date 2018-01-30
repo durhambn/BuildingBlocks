@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">BuildingBlocks</string>
+    <string name="pressDown">Pressed Down</string>
+    <string name="buttonReleased">Button Released</string>
 </resources>
